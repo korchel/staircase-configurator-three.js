@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+}
+
+$light: #D7D7D7;
+$dark: #6C757D;
+$white: white;
+
+.controls {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $light;
+  .form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    .inputgroup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      input {
+        width: 80px;
+        padding: 0.5em;
+        border: none;
+      }
+    }
+    button {
+      padding: 0.5em;
+      background-color: $dark;
+      border: 1px solid $light;
+      border-radius: 0.25rem;
+      color: $white;
+      &:hover {
+        border: 1px solid $dark;
+      }
+    }
+  }
+}

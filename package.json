@@ -7,14 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack serve --open --mode development",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "on-change": "^5.0.1",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^9.5.14",
+    "sass": "^1.77.4",
     "sass-loader": "^14.2.1",
     "three": "^0.164.1"
   },

@@ -18,4 +18,10 @@ export default {
   output: {
     clean: true,
   },
+  devServer: {
+    watchFiles: ["./public/*", "./index.html"],
+    port: 3000,
+    open:true,
+    liveReload: true,
+  },
 };

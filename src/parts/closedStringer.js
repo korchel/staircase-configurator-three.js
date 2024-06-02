@@ -29,10 +29,22 @@ const drawClosedStringer = (totalRise, locationPoint = { x: 0, y: 0, z: 0}, fact
     bevelSegments: 1
   };
   const geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
-  const material = new THREE.MeshBasicMaterial({ color: 'green' });
+  const material = new THREE.MeshBasicMaterial({
+    color: 0x8f2323,
+    polygonOffset: true,
+    polygonOffsetFactor: 1,
+    polygonOffsetUnits: 1
+  });
 
   const mesh = new THREE.Mesh(geometry, material);
+
+  const edgesGeomtery = new THREE.EdgesGeometry(mesh.geometry);
+  const edgesMatreial = new THREE.LineBasicMaterial( { color: 0x59200f } );
+  var edges = new THREE.LineSegments(edgesGeomtery, edgesMatreial);
+  mesh.add(edges);
+
   mesh.position.z = locationPoint.z;
+
   return mesh;
 };
 
